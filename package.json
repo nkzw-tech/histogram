@@ -1,0 +1,28 @@
+{
+  "name": "@nkzw/histogram",
+  "version": "1.0.0",
+  "author": "Christoph Nakazawa <christoph.pojer@gmail.com>",
+  "description": "A tiny utility to print horizontal histograms based on an array of numbers.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkzw-tech/histogram.git"
+  },
+  "license": "MIT",
+  "main": "lib/histogram.js",
+  "type": "module",
+  "keywords": [
+    "histogram",
+    "terminal"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.3"
+  },
+  "scripts": {
+    "build": "mkdir -p lib && rm lib/*; tsc --declaration --emitDeclarationOnly --noEmit false && esbuild --target=node18 --format=esm --platform=node --outfile=lib/histogram.js --external:canvas --bundle ./src/histogram.js",
+    "test": "tsc"
+  }
+}
