@@ -1,6 +1,6 @@
 {
   "name": "@nkzw/histogram",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Christoph Nakazawa <christoph.pojer@gmail.com>",
   "description": "A tiny utility to print horizontal histograms based on an array of numbers.",
   "repository": {
