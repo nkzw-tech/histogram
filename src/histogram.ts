@@ -1,9 +1,10 @@
 const bars = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
 const barLength = bars.length - 1;
 
-const dim = (string: string) => `\x1B[2m${string}\x1B[22m`;
-
-export default function histogram(data: ReadonlyArray<number>) {
+export default function histogram(
+  data: ReadonlyArray<number>,
+  dim = (string: string) => `\x1B[2m${string}\x1B[22m`
+) {
   const count = new Map<number, number>();
   for (const entry of data) {
     count.set(entry, (count.get(entry) || 0) + 1);
